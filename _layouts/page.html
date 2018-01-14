@@ -1,7 +1,15 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+{% include head.html %}
 
-<h2>{{ page.title }}</h2>
-   
-{{ content }}
+<body onload="init();" class="page">
+  {% include header.html %}
+
+	<main class="page-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+
+</html>

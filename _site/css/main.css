@@ -161,6 +161,10 @@ footer { padding: 3rem; text-align: center; }
 
 img.adaptive { width: 100%; height: auto; }
 
+.link { display: block; margin-bottom: 8px; }
+.link--with-icon::before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin-right: 12px; }
+.link--with-icon-document { content: '\f1c1'; }
+
 .btn { display: inline-block; padding: 10px 28px; text-decoration: none; border: 2px solid transparent; transition: all 300ms; }
 .btn--primary { background-color: #d01031; color: #fff; }
 .btn--primary:hover, .btn--primary:active { background-color: #fff; color: #d01031; }
@@ -218,6 +222,15 @@ img.adaptive { width: 100%; height: auto; }
 .partner-logo { display: block; max-width: 140px; margin: auto; margin-top: 12px; filter: grayscale(1); }
 
 .copyright { margin-top: 60px; }
+
+.page { background-color: #fff; }
+.page h1 { font-size: 3.2rem; }
+.page .site-header { display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; max-width: 1170px; margin: auto; padding: 18px 0; }
+.page .site-footer { background-color: #e6e6e6; }
+.page .logo { width: 200px; }
+.page .date { margin-top: -8px; font-size: 1.4rem; font-style: italic; }
+
+.page-content { max-width: 1170px; margin: auto; padding-top: 80px; padding-bottom: 120px; }
 
 @media (min-width: 768px) { .main .logo-group { flex-wrap: nowrap; }
   .main .logo { margin-right: 16px; margin-left: -50px; }

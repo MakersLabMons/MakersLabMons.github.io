@@ -32,6 +32,15 @@ $s-spacing-v-s: 8px;
   }
 }
 
+@mixin fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Font Faces */
 @font-face {
   font-family: 'icomoon';
@@ -139,6 +148,20 @@ footer {
 img.adaptive {
   width: 100%;
   height: auto;
+}
+
+.link {
+  display: block;
+  margin-bottom: $s-spacing-v-s;
+
+  &--with-icon::before {
+    @include fa();
+    margin-right: $s-spacing-h-s;
+  }
+
+  &--with-icon-document {
+    content: '\f1c1';
+  }
 }
 
 .btn {
@@ -429,6 +452,45 @@ img.adaptive {
 
 .copyright {
   margin-top: 60px;
+}
+
+.page {
+  background-color: #fff;
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .site-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: auto;
+    padding: $s-spacing-h 0;
+  }
+
+  .site-footer {
+    background-color: $c-background;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .date {
+    margin-top: -$s-spacing-v-s;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+}
+
+.page-content {
+  max-width: 1170px;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 
 @media (min-width: 768px) {
